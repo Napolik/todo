@@ -1,5 +1,8 @@
 .search-input {
-    width: auto;
+    width: 70%;
+    height: 35px;
+    border: 1px dashed grey;
     flex-grow: 1;
     margin-right: 3px;
+    padding-left: 10px;
 }

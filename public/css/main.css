@@ -1,0 +1,18 @@
+.grey {
+    color: rgb(223, 223, 223);
+}
+
+.icon {
+    padding-top: 4px;
+}
+
+nav span {
+    color: #fff;
+    top: -10px;
+    position: relative;
+    font-size: 16px;
+}
+
+.nav .li {
+    margin-left: 25px;
+}
