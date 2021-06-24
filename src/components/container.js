@@ -1,8 +1,8 @@
 import React from 'react';
-import './container.css';
+//import 'container.css';
 
 import AppHeader from './app-header';
-import ItemStatusFilter from './item-status-filte';
+import ItemStatusFilter from './item-status-filter';
 import SearchPanel from './search-panel';
 import TodoList from './todo-list';
 
