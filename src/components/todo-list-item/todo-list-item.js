@@ -5,7 +5,13 @@ export default class TodoListItem extends Component {
 
   constructor() {
     super();
+
+    this.state ={
+      done: false
+    };
+    
     this.onLabelClick = () => {
+      this.setState({ done : true });
       console.log(`Done: ${ this.props.label }`);
     };
   }
@@ -13,6 +19,12 @@ export default class TodoListItem extends Component {
   render() {
 
     const {label, important = false} = this.props;
+    const { done } = this.state;
+
+    let classNames = 'todo-list-item';
+    if (done) {
+      classNames += ' done';
+    }
 
     const style = {
       color: important ? 'tomato' : 'black' 
@@ -20,7 +32,7 @@ export default class TodoListItem extends Component {
       return (
           <div>
           <span 
-            className="todo-list-item" 
+            className={classNames} 
             style={style}
             onClick={ this.onLabelClick }>
             { label }  
