@@ -43,10 +43,6 @@ export default class TodoListItem extends Component {
       classNames += ' important';
     }
 
-    //const style = {
-    //  color: important ? 'tomato' : 'black' 
-    //};
-
       return (
           <div>
           <span 
