@@ -20,12 +20,17 @@ export default class App extends Component {
     };
 
     createTodoItem(label) {
+      if(label === '') {
+        label = 'Empty text';
+      }
       return {
         label,
         important: false,
         done: false,
         id: this.maxId++
       }
+    
+    
     }
     
     deleteItem = (id) => {
@@ -46,8 +51,8 @@ export default class App extends Component {
         return {
           todoData: newArr
         };
-        console.log('item added', text);
-      } );
+      } 
+      );
 
     
     };
@@ -55,7 +60,7 @@ export default class App extends Component {
     toggleProperty(arr, id, propName) {
       const idx = arr.findIndex((el) => el.id === id);
       const oldItem = arr[idx];
-      const newItem = {... oldItem, [propName]: !oldItem[propName]};
+      const newItem = {...oldItem, [propName]: !oldItem[propName]};
 
       return [...arr.slice(0, idx),
               newItem,
