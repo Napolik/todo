@@ -2,18 +2,21 @@ import React, { Component } from 'react';
 import './search-panel.css';
 
 export default class SearchPanel extends Component {
+
     state = {
-        label: ''
+        term: ''
     };
 
-    
     onSearchChange = (e) => {
-        console.log(e.target.value);
+        const term = e.target.value;
+        this.setState({term});
+        this.props.onSearchChange(term);
     };
 
     render() {
     return <input className="search-input"
     onChange={this.onSearchChange}
-    placeholder="Search text"/>;
+    placeholder="Search text"
+    value={this.state.term} />;
     }
   };
